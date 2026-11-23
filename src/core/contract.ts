@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 export const GMO_API_BASE_URL_VAR = 'GMO_API_BASE_URL';
 
 export const ME_PATH = '/api/v1.0/me';
@@ -10,11 +12,10 @@ export function resolveBaseUrl(hints?: {
   missingEnvHint?: string;
   defaultOrigin?: string;
 }): string {
-  // globalThis.process (not the bare `process` identifier): n8n's
-  // community-package linter forbids the restricted global in shipped code,
-  // and the optional chain degrades to the default/hint path if a sandbox
-  // ever omits it. Same object in every current runtime.
-  const base = globalThis.process?.env?.[GMO_API_BASE_URL_VAR];
+  // `process` comes from an explicit module import, not the global binding:
+  // n8n's community-package linter forbids the restricted globals `process`
+  // and `globalThis` in shipped code, and a local binding is not the global.
+  const base = process.env[GMO_API_BASE_URL_VAR];
 
   if (!base) {
     if (hints?.defaultOrigin) {

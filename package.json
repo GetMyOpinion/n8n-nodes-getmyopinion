@@ -1,16 +1,16 @@
 {
   "name": "n8n-nodes-getmyopinion",
-  "version": "1.0.1",
-  "description": "GetMyOpinion nodes for n8n \u2014 send customer satisfaction surveys for completed services",
+  "version": "1.0.2",
+  "description": "GetMyOpinion nodes for n8n — send customer satisfaction surveys for completed services",
   "keywords": [
     "n8n-community-node-package"
   ],
+  "homepage": "https://github.com/GetMyOpinion/n8n-nodes-getmyopinion#readme",
   "license": "MIT",
   "author": {
     "name": "GetMyOpinion",
     "email": "devgmo@getmyopinion.fr"
   },
-  "homepage": "https://github.com/GetMyOpinion/n8n-nodes-getmyopinion#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GetMyOpinion/n8n-nodes-getmyopinion.git"
