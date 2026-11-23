@@ -9,9 +9,13 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["./src/test"]
+  "include": [
+    "./src/**/*.ts",
+    "./nodes/**/*.ts",
+    "./credentials/**/*.ts",
+    "./tests/**/*.ts"
+  ],
+  "exclude": ["./tests"]
 }

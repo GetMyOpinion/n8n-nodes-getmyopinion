@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-getmyopinion",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GetMyOpinion nodes for n8n — send customer satisfaction surveys for completed services",
   "keywords": [
     "n8n-community-node-package"

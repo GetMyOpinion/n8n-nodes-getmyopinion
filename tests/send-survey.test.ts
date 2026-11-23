@@ -3,8 +3,8 @@ import {
   SURVEY_SEND_FIELDS,
   SURVEY_SENDS_PATH,
   buildSurveySendPayload,
-} from '../core/index.js';
-import type { SurveySendInput } from '../core/index.js';
+} from '../src/core/index.js';
+import type { SurveySendInput } from '../src/core/index.js';
 import { NodeApiError } from 'n8n-workflow';
 import type {
   IExecuteFunctions,
@@ -110,7 +110,7 @@ describe('GetMyOpinion node description', () => {
     expect(node.description.icon).toBe(
       'data:image/svg+xml;base64,' +
         readFileSync(
-          new URL('../../assets/getmyopinion.svg', import.meta.url),
+          new URL('../assets/getmyopinion.svg', import.meta.url),
         ).toString('base64'),
     );
     expect(node.description.version).toBe(1);

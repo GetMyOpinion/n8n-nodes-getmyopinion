@@ -21,11 +21,11 @@ await esbuild
     entryPoints: {
       'dist/nodes/GetMyOpinion.node': join(
         packageRoot,
-        'src/nodes/GetMyOpinion.node.ts',
+        'nodes/GetMyOpinion.node.ts',
       ),
       'dist/credentials/GetMyOpinionApi.credentials': join(
         packageRoot,
-        'src/credentials/GetMyOpinionApi.credentials.ts',
+        'credentials/GetMyOpinionApi.credentials.ts',
       ),
     },
     bundle: true,

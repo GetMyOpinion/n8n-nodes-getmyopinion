@@ -3,7 +3,7 @@ import {
   PRODUCTION_ORIGIN,
   buildGmoAuthHeaders,
   resolveBaseUrl,
-} from '../core/index.js';
+} from '../src/core/index.js';
 import type {
   IAuthenticate,
   ICredentialDataDecryptedObject,

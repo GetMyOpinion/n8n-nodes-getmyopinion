@@ -6,11 +6,11 @@ import {
   classifyAuthFailure,
   classifySurveySendFailure,
   resolveBaseUrl,
-} from '../core/index.js';
+} from '../src/core/index.js';
 import type {
   SurveySendErrorBody,
   SurveySendInput,
-} from '../core/index.js';
+} from '../src/core/index.js';
 import { NodeApiError } from 'n8n-workflow';
 import type {
   IDataObject,

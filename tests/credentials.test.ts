@@ -3,7 +3,7 @@ import {
   PRODUCTION_ORIGIN,
   SURVEY_SENDS_PATH,
   buildGmoAuthHeaders,
-} from '../core/index.js';
+} from '../src/core/index.js';
 import type { IHttpRequestOptions } from 'n8n-workflow';
 import { describe, expect, it } from 'vitest';
 
