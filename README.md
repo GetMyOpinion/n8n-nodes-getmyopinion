@@ -44,10 +44,10 @@ n8n Cloud: available from the nodes panel once verified.
 
 ### Base URL
 
-Requests go to `https://www.getmyopinion.eu` by default. Self-hosted
-operators can override the origin with the `GMO_API_BASE_URL` environment
-variable on the n8n instance (e.g. to point at a dedicated environment).
-The base URL is never a credential field.
+Requests go to `https://www.getmyopinion.eu` — the package's fixed,
+compiled-in origin. It is never a credential field, and the npm
+distribution does not read environment variables (n8n Cloud's sandbox
+forbids it in community nodes).
 
 ### Errors and retries
 
