@@ -58,9 +58,10 @@ Enable n8n's **Retry On Fail** on the node for automatic retries.
 
 ## Compatibility
 
-- Node.js >= 20
-- No runtime dependencies — the n8n host provides `n8n-workflow` /
-  `n8n-core`
+- The published package has no runtime dependencies — the n8n host provides
+  `n8n-workflow`. Node.js >= 20 on the n8n host.
+- **Developing** this package needs Node.js >= 24: the `n8n-workflow`
+  devDependency transitively compiles `isolated-vm`, which requires it.
 
 ## Development
 

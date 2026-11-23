@@ -1,7 +1,7 @@
 {
   "name": "n8n-nodes-getmyopinion",
   "version": "1.0.0",
-  "description": "GetMyOpinion nodes for n8n — send customer satisfaction surveys for completed services",
+  "description": "GetMyOpinion nodes for n8n \u2014 send customer satisfaction surveys for completed services",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@types/node": "25.9.1",
     "esbuild": "0.28.2",
-    "n8n-core": "2.49.0",
     "n8n-workflow": "2.49.0",
     "rimraf": "5.0.10",
     "typescript": "5.6.2",
