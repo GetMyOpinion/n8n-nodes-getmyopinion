@@ -28,7 +28,9 @@ jobs:
       - name: Build and verify dist
         run: npm run build && npm run verify:dist
 
+      # Tokenless: publishes via npm Trusted Publishing (OIDC) — the trusted
+      # publisher for this package is configured on npmjs.com (repository
+      # GetMyOpinion/n8n-nodes-getmyopinion, workflow publish.yml). The
+      # id-token: write permission above mints the short-lived publish token.
       - name: Publish with provenance
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
