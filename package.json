@@ -1,0 +1,43 @@
+{
+  "name": "n8n-nodes-getmyopinion",
+  "version": "1.0.0",
+  "description": "GetMyOpinion nodes for n8n — send customer satisfaction surveys for completed services",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GetMyOpinion/n8n-nodes-getmyopinion.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && node esbuild.config.mjs",
+    "test:unit": "rimraf ./dist && tsc && tsc -p tsconfig.test.json && vitest --run",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1",
+    "esbuild": "0.28.2",
+    "n8n-core": "2.49.0",
+    "n8n-workflow": "2.49.0",
+    "rimraf": "5.0.10",
+    "typescript": "5.6.2",
+    "vitest": "4.1.6",
+    "zod": "3.25.76"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "n8n": {
+    "nodes": [
+      "dist/nodes/*.node.js"
+    ],
+    "credentials": [
+      "dist/credentials/*.credentials.js"
+    ]
+  }
+}
