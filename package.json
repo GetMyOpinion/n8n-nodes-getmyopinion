@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-getmyopinion",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "GetMyOpinion nodes for n8n \u2014 send customer satisfaction surveys for completed services",
   "keywords": [
     "n8n-community-node-package"
@@ -42,7 +42,7 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/GetMyOpinion/N8n-nodes-getmyopinion.node.js"
+      "dist/nodes/GetMyOpinion/GetMyOpinion.node.js"
     ],
     "credentials": [
       "dist/credentials/GetMyOpinionApi.credentials.js"

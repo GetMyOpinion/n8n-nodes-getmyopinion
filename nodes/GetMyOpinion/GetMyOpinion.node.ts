@@ -7,11 +7,11 @@ import {
   classifySurveySendFailure,
   resolveBaseUrl,
 } from '../../src/core/index.js';
-import { NodeConnectionTypes } from 'n8n-workflow';
 import type {
   SurveySendErrorBody,
   SurveySendInput,
 } from '../../src/core/index.js';
+import { NodeConnectionTypes } from 'n8n-workflow';
 import { NodeApiError } from 'n8n-workflow';
 import type {
   IDataObject,
@@ -36,7 +36,7 @@ interface SurveySendResponse {
 
 export class GetMyOpinion implements INodeType {
   description: INodeTypeDescription = {
-    name: 'n8n-nodes-getmyopinion',
+    name: 'getMyOpinion',
     displayName: 'GetMyOpinion',
     documentationUrl:
       'https://github.com/GetMyOpinion/n8n-nodes-getmyopinion#readme',

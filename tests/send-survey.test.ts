@@ -14,7 +14,7 @@ import type {
 } from 'n8n-workflow';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { GetMyOpinion, N8N_RETRY_SUFFIX } from '../nodes/GetMyOpinion/N8n-nodes-getmyopinion.node';
+import { GetMyOpinion, N8N_RETRY_SUFFIX } from '../nodes/GetMyOpinion/GetMyOpinion.node';
 
 import { readFileSync } from 'node:fs';
 
@@ -103,7 +103,7 @@ describe('GetMyOpinion node description', () => {
   const node = new GetMyOpinion();
 
   it('declares the package node identity and credential requirement', () => {
-    expect(node.description.name).toBe('n8n-nodes-getmyopinion');
+    expect(node.description.name).toBe('getMyOpinion');
     expect(node.description.displayName).toBe('GetMyOpinion');
     // The icon is the base64 data URI of assets/getmyopinion.svg — asserting
     // against the file keeps the two from drifting apart.
@@ -177,9 +177,7 @@ describe('GetMyOpinion Send Survey execute', () => {
     expect(options.ignoreHttpStatusErrors).toBe(true);
     expect(options.returnFullResponse).toBe(true);
 
-    expect(output).toEqual(
-      [[{ json: acceptedBody, pairedItem: { item: 0 } }]],
-    );
+    expect(output).toEqual([[{ json: acceptedBody, pairedItem: { item: 0 } }]]);
   });
 
   it('throws a NodeApiError with the halt message and field details on 422 VALIDATION_FAILED', async () => {

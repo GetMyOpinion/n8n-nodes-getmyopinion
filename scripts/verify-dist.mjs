@@ -12,7 +12,7 @@ const packageRoot = fileURLToPath(new URL('..', import.meta.url));
 const distDir = join(packageRoot, 'dist');
 
 const requiredFiles = [
-  'dist/nodes/GetMyOpinion/N8n-nodes-getmyopinion.node.js',
+  'dist/nodes/GetMyOpinion/GetMyOpinion.node.js',
   'dist/credentials/GetMyOpinionApi.credentials.js',
 ];
 const requiredIcon = 'dist/nodes/GetMyOpinion/getmyopinion.svg';

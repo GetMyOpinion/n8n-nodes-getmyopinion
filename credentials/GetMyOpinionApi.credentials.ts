@@ -4,7 +4,15 @@ import {
   buildGmoAuthHeaders,
   resolveBaseUrl,
 } from '../src/core/index.js';
-import type { IAuthenticate, ICredentialDataDecryptedObject, ICredentialTestRequest, ICredentialType, IHttpRequestOptions, INodeProperties, Icon } from 'n8n-workflow';
+import type {
+  IAuthenticate,
+  ICredentialDataDecryptedObject,
+  ICredentialTestRequest,
+  ICredentialType,
+  IHttpRequestOptions,
+  INodeProperties,
+  Icon,
+} from 'n8n-workflow';
 
 export class GetMyOpinionApi implements ICredentialType {
   name = 'getMyOpinionApi';
@@ -12,7 +20,7 @@ export class GetMyOpinionApi implements ICredentialType {
   displayName = 'GetMyOpinion API';
   documentationUrl =
     'https://github.com/GetMyOpinion/n8n-nodes-getmyopinion#readme';
-  icon: Icon = 'fa:key';
+  icon: Icon = 'file:getmyopinion.svg';
 
   properties: INodeProperties[] = [
     {
