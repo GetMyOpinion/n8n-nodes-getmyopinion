@@ -12,10 +12,10 @@ const packageRoot = fileURLToPath(new URL('..', import.meta.url));
 const distDir = join(packageRoot, 'dist');
 
 const requiredFiles = [
-  'dist/nodes/GetMyOpinion.node.js',
+  'dist/nodes/GetMyOpinion/N8n-nodes-getmyopinion.node.js',
   'dist/credentials/GetMyOpinionApi.credentials.js',
 ];
-const requiredIcon = 'dist/nodes/getmyopinion.svg';
+const requiredIcon = 'dist/nodes/GetMyOpinion/getmyopinion.svg';
 
 // Matches top-level `import ...` statements — a compiled CJS bundle must not
 // contain any (esbuild emits `require` calls instead).

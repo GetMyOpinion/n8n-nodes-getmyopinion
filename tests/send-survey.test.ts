@@ -14,7 +14,7 @@ import type {
 } from 'n8n-workflow';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { GetMyOpinion, N8N_RETRY_SUFFIX } from '../nodes/GetMyOpinion.node';
+import { GetMyOpinion, N8N_RETRY_SUFFIX } from '../nodes/GetMyOpinion/N8n-nodes-getmyopinion.node';
 
 import { readFileSync } from 'node:fs';
 
@@ -177,7 +177,9 @@ describe('GetMyOpinion Send Survey execute', () => {
     expect(options.ignoreHttpStatusErrors).toBe(true);
     expect(options.returnFullResponse).toBe(true);
 
-    expect(output).toEqual([[{ json: acceptedBody }]]);
+    expect(output).toEqual(
+      [[{ json: acceptedBody, pairedItem: { item: 0 } }]],
+    );
   });
 
   it('throws a NodeApiError with the halt message and field details on 422 VALIDATION_FAILED', async () => {

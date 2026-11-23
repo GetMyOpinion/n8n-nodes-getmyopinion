@@ -19,9 +19,9 @@ await esbuild
     absWorkingDir: packageRoot,
     outdir: packageRoot,
     entryPoints: {
-      'dist/nodes/GetMyOpinion.node': join(
+      'dist/nodes/GetMyOpinion/N8n-nodes-getmyopinion.node': join(
         packageRoot,
-        'nodes/GetMyOpinion.node.ts',
+        join('nodes', 'GetMyOpinion', 'N8n-nodes-getmyopinion.node.ts'),
       ),
       'dist/credentials/GetMyOpinionApi.credentials': join(
         packageRoot,
@@ -40,6 +40,6 @@ await esbuild
 
 // esbuild does not copy assets referenced through data URIs; the icon base64
 // in the node description is generated from this SVG at development time.
-const iconTarget = join(packageRoot, 'dist/nodes/getmyopinion.svg');
+const iconTarget = join(packageRoot, 'dist/nodes/GetMyOpinion/getmyopinion.svg');
 mkdirSync(dirname(iconTarget), { recursive: true });
 copyFileSync(join(packageRoot, 'assets/getmyopinion.svg'), iconTarget);
