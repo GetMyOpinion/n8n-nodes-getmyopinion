@@ -20,7 +20,10 @@ export class GetMyOpinionApi implements ICredentialType {
   displayName = 'GetMyOpinion API';
   documentationUrl =
     'https://github.com/GetMyOpinion/n8n-nodes-getmyopinion#readme';
-  icon: Icon = 'file:getmyopinion.svg';
+  icon: Icon = {
+    light: 'file:getmyopinion.svg',
+    dark: 'file:getmyopinion.svg',
+  };
 
   properties: INodeProperties[] = [
     {
